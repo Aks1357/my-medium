@@ -1,0 +1,37 @@
+<div *ngIf="loading">
+  Loading...
+</div>
+<div *ngIf="!loading">
+  <div *ngIf="!blogs && !author">
+    <p>No blog found!</p>
+  </div>
+  <div [ngClass]="blogClass" *ngIf="blogs">
+    <h1 class="title">{{blogTitle}}</h1>
+    <div *ngFor="let x of userBlogs.items; last as last;">
+      <h3 class="link">
+        <a href="{{x.link}}" target="_blank">{{x.title}}</a>
+      </h3>
+      <span class="author">Author: {{x.author}} </span> |
+      <span class="pubDate">Published On: {{x.pubDate | date}} </span>
+      <ul class="categories">
+        <li *ngFor="let y of x.categories">
+          <span>{{y}}</span>
+        </li>
+      </ul>
+      <hr class="separator">
+    </div>
+  </div>
+
+  <div [ngClass]="authorClass" *ngIf="author">
+    <h1 class="title">{{authorTitle}}</h1>
+    <div>
+      <h3 class="link">
+        <a href="{{userBlogs.feed.url}}" target="_blank">{{userBlogs.feed.author || userBlogs.feed.title}}</a>
+      </h3>
+      <span>
+        <img src="{{userBlogs.feed.image}}" alt="{{userBlogs.feed.title}}" />
+        <p class="description">{{userBlogs.feed.description}}</p>
+      </span>
+    </div>
+  </div>
+</div>
