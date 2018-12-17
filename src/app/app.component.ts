@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   username: String = '@aks1357';
 
   @Input()
-  blogs: Boolean = true;
+  blogs: Boolean = false;
 
   @Input()
   blogTitle: String = 'Blogs';
