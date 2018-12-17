@@ -1,0 +1,25 @@
+{
+  "name": "aks-my-medium",
+  "version": "1.0.2",
+  "description": "Display list of Medium Blogs of a specified user using Angular Element",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aks1357/my-medium.git"
+  },
+  "keywords": [
+    "Angular",
+    "Elements",
+    "Angular",
+    "Javascript"
+  ],
+  "author": "Akshay Garg",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aks1357/my-medium/issues"
+  },
+  "homepage": "https://github.com/Aks1357/my-medium"
+}

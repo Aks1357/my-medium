@@ -11,8 +11,8 @@ const concat = require('concat');
 
   await fs.ensureDir('elements');
   await concat(files, 'elements/aks-my-medium.js');
-  if (fs.existsSync('../aks-my-medium-test/aks-my-medium.js')) {
-    fs.unlinkSync('../aks-my-medium-test/aks-my-medium.js');
+  if (fs.existsSync('aks-my-medium-test/index.js')) {
+    fs.unlinkSync('aks-my-medium-test/index.js');
   }
-  fs.copyFileSync('elements/aks-my-medium.js', '../aks-my-medium-test/aks-my-medium.js');
+  fs.copyFileSync('elements/aks-my-medium.js', 'aks-my-medium-test/index.js');
 })();
